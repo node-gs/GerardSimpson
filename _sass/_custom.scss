@@ -91,7 +91,15 @@ hr {
     display: inline-block;
     margin-left: 10px;
     opacity: 0;
-    transform: translateX(10px); }
+    transform: translateX(10px);
+  }
+
+  // experimenting with post meta styling
+  .content ul li span.post-meta {
+    font-size: 70px;
+    margin-top:-20px;
+    color: red;
+  }
 
 header[role="banner"] {
   position: relative;
