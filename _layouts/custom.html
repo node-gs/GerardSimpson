@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en-US'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+    
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <title>Gerard Simpson - Web Developer</title>
+  </head>
+  <body>
+    <header role='banner'>
+      <div class='container'>
+        <div class='col-1'>
+          
+        </div>
+        <div class='col-2'>
+          <h1>
+            Gerard Simpson &mdash;
+            <span>Web Developer</span>
+          </h1>
+          <p>
+            Lover of web technologies, modern JS frameworks and fixing/breaking things.
+          </p>
+        </div>
+      </div>
+    </header>
+    <section role='main'>
+      <div class='container content'>
+        <div class='col-1'>
+          <h2>Projects</h2>
+        </div>
+        <div class='col-2'>
+          <!-- <ul>
+            <li>
+              <a href='http://dubsmash.com' target='_blank'>Dubsmash</a>
+              <span>UI & UX design</span>
+            </li>
+            <li>
+              <a href='http://producthunt.com' target='_blank'>Product Hunt</a>
+              <span>UI & UX design</span>
+            </li>
+            <li>
+              <a href='http://airbnb.com' target='_blank'>Airbnb</a>
+              <span>UI & UX design</span>
+            </li>
+            <li>
+              <a href='http://brewbot.com' target='_blank'>Brewbot</a>
+              <span>UI & UX design</span>
+            </li>
+            <li>
+              <a href='https://www.youtube.com/watch?v=JzyibMjn7YE' target='_blank'>Killzone: Shadow Fall</a>
+              <span>Game interface design</span>
+            </li>
+            <li>
+              <a href='http://yourkarma.com' target='_blank'>Karma</a>
+              <span>Lead Designer</span>
+            </li>
+            <li>
+              <a href='http://madeawkward.com' target='_blank'>Awkward</a>
+              <span>Product designer</span>
+            </li>
+            <li>
+              <a href='http://beamreddit.com' target='_blank'>Beam for reddit</a>
+              <span>UI & UX design</span>
+            </li>
+            <li>
+              <a href='http://birdback.com/' target='_blank'>Birdback</a>
+              <span>Branding & Identity</span>
+            </li>
+          </ul> -->
+          <ul class="post-list">
+            {% for project in site.projects %}
+              <li>
+                <h2>
+                  <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+                </h2>
+                <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class='container content'>
+        <div class='col-1'>
+          <h2>Info</h2>
+        </div>
+        <div class='col-2'>
+          <p>
+            Email
+            <a href='mailto:gardesimpson@gmail.com'>gardesimpson@gmail.com</a>
+            <br>
+            Phone
+            <a href='tel:0031681182625'>+61 497677354</a>
+            <br>
+            <a href=''>Resume</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class='container content'>
+        <div class='col-1'>
+          <h2>Elsewhere</h2>
+        </div>
+        <div class='col-2'>
+          <ul class='float-list'>
+            <li>
+              <a href='https://github.com/node-gs/' target='_blank'>GitHub</a>
+            </li>
+            <li>
+              <a href='http://stackoverflow.com/users/4476186/gerard-simpson?tab=profile' target='_blank'>stack<strong>overflow</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class='container content'>
+        <div class='col-1'>
+          <h2>
+            Blog Posts
+          </h2>
+        </div>
+        <div class='col-2'>
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer role='contentinfo'>
+      <div class='container content'>
+        <div class='col-1'>
+          
+        </div>
+        <div class='col-2'>
+          Back to Top
+        </div>
+      </div>
+    </footer>
+    <!-- <script src='/js/jquery.min.js'></script>
+    <script src='/js/main.js'></script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9622756-4']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script> -->
+  </body>
+</html>
