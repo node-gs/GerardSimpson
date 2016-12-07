@@ -1,141 +1,115 @@
 <!DOCTYPE html>
 <html dir='ltr' lang='en-US'>
-  <head>
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
-    
+
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/particles.css" | prepend: site.baseurl }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Gerard Simpson - Web Developer</title>
   </head>
   <body>
-    <header role='banner'>
-      <div class='container'>
-        <div class='col-1'>
-          
-        </div>
-        <div class='col-2'>
-          <h1>
-            Gerard Simpson &mdash;
-            <span>Web Developer</span>
-          </h1>
-          <p>
-            Lover of web technologies, modern JS frameworks and fixing things.
-          </p>
-          <p>
-            Below, you can find examples of my <a href="#work">work</a>, my <a href="#elsewhere">online accounts</a>, how to <a href="#info">find me</a>, my <a href="#resume">resume</a> and my <a href="#blog">blog</a>.
-          </p>
+  <div ></div>
+    <header role='banner' id="particles-js">
+      <div class='container-fluid'>
+        <div class='row'>
+          <div class='col-xs-12'>
+            <div class="banner-content">
+              <h1>
+                Gerard Simpson &mdash;
+                <span>Web Developer</span>
+              </h1>
+              <h2>
+                Lover of web technologies, modern JS frameworks and fixing things.
+              </h2>
+              <h2>
+                Below, you can find examples of my <a href="#work">work</a>, my <a href="#elsewhere">online accounts</a>, how to <a href="#info">find me</a>, my <a href="#resume">resume</a> and my <a href="#blog">blog</a>.
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <section role='main'>
-      <div class='container content'>
-        <div class='col-1'>
-          <h2>Projects</h2>
+      <div class='container-fluid content'>
+        <div class="row">
+          <div class='col-xs-4'>
+            <h2>Projects</h2>
+          </div>
+          <div class='col-xs-8'>
+            <ul class="post-list">
+              {% for project in site.projects %}
+                <li>
+                  <h2>
+                    <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+                  </h2>
+                  <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
-        <div class='col-2'>
-          <!-- <ul>
-            <li>
-              <a href='http://dubsmash.com' target='_blank'>Dubsmash</a>
-              <span>UI & UX design</span>
-            </li>
-            <li>
-              <a href='http://producthunt.com' target='_blank'>Product Hunt</a>
-              <span>UI & UX design</span>
-            </li>
-            <li>
-              <a href='http://airbnb.com' target='_blank'>Airbnb</a>
-              <span>UI & UX design</span>
-            </li>
-            <li>
-              <a href='http://brewbot.com' target='_blank'>Brewbot</a>
-              <span>UI & UX design</span>
-            </li>
-            <li>
-              <a href='https://www.youtube.com/watch?v=JzyibMjn7YE' target='_blank'>Killzone: Shadow Fall</a>
-              <span>Game interface design</span>
-            </li>
-            <li>
-              <a href='http://yourkarma.com' target='_blank'>Karma</a>
-              <span>Lead Designer</span>
-            </li>
-            <li>
-              <a href='http://madeawkward.com' target='_blank'>Awkward</a>
-              <span>Product designer</span>
-            </li>
-            <li>
-              <a href='http://beamreddit.com' target='_blank'>Beam for reddit</a>
-              <span>UI & UX design</span>
-            </li>
-            <li>
-              <a href='http://birdback.com/' target='_blank'>Birdback</a>
-              <span>Branding & Identity</span>
-            </li>
-          </ul> -->
-          <ul class="post-list">
-            {% for project in site.projects %}
+      </div>
+      <hr>
+      <div class='container-fluid content'>
+        <div class="row">
+          <div class='col-xs-4'>
+            <h2>Info</h2>
+          </div>
+          <div class='col-xs-8'>
+            <p>
+              Email
+              <a href='mailto:gardesimpson@gmail.com'>gardesimpson@gmail.com</a>
+              <br>
+              Phone
+              <a href='tel:0031681182625'>+61 497677354</a>
+              <br>
+              <a href=''>Resume</a>
+            </p>
+          </div>
+      </div>
+      </div>
+      <hr>
+      <div class='container-fluid content'>
+        <div class="row">
+          <div class='col-xs-4'>
+            <h2>Elsewhere</h2>
+          </div>
+          <div class='col-xs-8'>
+            <ul class='float-list'>
               <li>
-                <h2>
-                  <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-                </h2>
-                <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+                <a href='https://github.com/node-gs/' target='_blank'>GitHub</a>
               </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class='container content'>
-        <div class='col-1'>
-          <h2>Info</h2>
-        </div>
-        <div class='col-2'>
-          <p>
-            Email
-            <a href='mailto:gardesimpson@gmail.com'>gardesimpson@gmail.com</a>
-            <br>
-            Phone
-            <a href='tel:0031681182625'>+61 497677354</a>
-            <br>
-            <a href=''>Resume</a>
-          </p>
-        </div>
-      </div>
-      <hr>
-      <div class='container content'>
-        <div class='col-1'>
-          <h2>Elsewhere</h2>
-        </div>
-        <div class='col-2'>
-          <ul class='float-list'>
-            <li>
-              <a href='https://github.com/node-gs/' target='_blank'>GitHub</a>
-            </li>
-            <li>
-              <a href='http://stackoverflow.com/users/4476186/gerard-simpson?tab=profile' target='_blank'>stack<strong>overflow</strong></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class='container content'>
-        <div class='col-1'>
-          <h2>
-            Blog Posts
-          </h2>
-        </div>
-        <div class='col-2'>
-          <ul class="post-list">
-            {% for post in site.posts %}
               <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a href='http://stackoverflow.com/users/4476186/gerard-simpson?tab=profile' target='_blank'>stack<strong>overflow</strong></a>
               </li>
-            {% endfor %}
-          </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class='container-fluid content'>
+        <div class="row">
+          <div class='col-xs-4'>
+            <h2>
+              Blog Posts
+            </h2>
+          </div>
+          <div class='col-xs-8'>
+            <ul class="post-list">
+              {% for post in site.posts %}
+                <li>
+                  <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+                  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -161,5 +135,8 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script> -->
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src='{{ "/js/particles.js" | prepend: site.baseurl }}'></script>
   </body>
 </html>

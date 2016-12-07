@@ -213,3 +213,28 @@ body.contrast {
   body.contrast nav[role="navigation"] label span:before,
   body.contrast nav[role="navigation"] label span:after {
     background: white; }
+
+
+
+header[role="banner"] {
+  div.container-fluid {
+    position:absolute;
+  }
+  .banner-content {
+      width: 70%;
+      height: 50%;
+      margin-top: 15%;
+      margin-left: 1%;
+    h1 {
+      font-size:48px;
+    }
+    h2 {
+      font-size:36px;
+    }
+  }
+}
+
+section[role="main"] {
+  margin-top:100vh;
+  position: absolute;
+}
