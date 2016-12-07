@@ -227,7 +227,7 @@ header[role="banner"] {
       width: 70%;
       height: 50%;
       margin-top: 20%;
-      margin-left: 1%;
+      margin-left: 17%;
     h1 {
       font-size: 72px;
       line-height: 100%;
@@ -261,6 +261,9 @@ section[role="main"] {
   .right-col {
     p {
      font-size: 26px;
+    }
+    ul {
+      padding-top: 42px;
     }
   }
 }
