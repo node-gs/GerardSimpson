@@ -19,11 +19,11 @@
             <div class="banner-content cl-effect nav">
               <h1>
                 Gerard Simpson,
-                <span>Web Developer</span>
+                </br>Web Developer
               </h1>
               <h2>
-                Lover of web technologies, modern JS frameworks and fixing things.
-                Below, you can find examples of my <a data-hover="work" href="#work">work</a>, my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">find me</a>, my <a data-hover="resume" href="#resume">resume</a> and my <a data-hover="blog" href="#blog">blog</a>.
+                Lover of web technologies, modern JS frameworks, and fixing things.
+                Below, you can find examples of my <a data-hover="work" href="#work">work</a>, my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">find me</a>, my <a data-hover="resume" href="#info">resume</a> and my <a data-hover="blog" href="#blog">blog</a>.
               </h2>
             </div>
           </div>
@@ -44,6 +44,28 @@
                     <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
                   </p>
                   <!-- <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span> -->
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class='container-fluid content' id="blog">
+        <div class="row">
+          <div class='col-xs-4 left-col'>
+            <h3>
+              Blog Posts
+            </h3>
+          </div>
+          <div class='col-xs-8 right-col'>
+            <ul class="post-list">
+              {% for post in site.posts %}
+                <li>
+                  <p>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </p>
+                  <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
                 </li>
               {% endfor %}
             </ul>
@@ -99,51 +121,9 @@
           </div>
         </div>
       </div>
-      <hr>
-      <div class='container-fluid content' id="blog">
-        <div class="row">
-          <div class='col-xs-4 left-col'>
-            <h3>
-              Blog Posts
-            </h3>
-          </div>
-          <div class='col-xs-8 right-col'>
-            <ul class="post-list">
-              {% for post in site.posts %}
-                <li>
-                  <p>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </p>
-                  <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
     <footer role='contentinfo'>
-      <div class='container content'>
-        <div class='col-1'>
-          
-        </div>
-        <div class='col-2'>
-          Back to Top
-        </div>
-      </div>
     </footer>
-    <!-- <script src='/js/jquery.min.js'></script>
-    <script src='/js/main.js'></script>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-9622756-4']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script> -->
   <script src='{{ "/js/particles.min.js" | prepend: site.baseurl }}'></script>
   <script src='{{ "/js/particles.js" | prepend: site.baseurl }}'></script>
   </body>
