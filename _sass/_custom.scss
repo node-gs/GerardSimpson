@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
   display: block; }
@@ -22,7 +20,7 @@ button, textarea, input {
   box-shadow: none; }
 
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
 }
 h1 {
@@ -97,16 +95,15 @@ hr {
   .content ul li span {
     display: inline-block;
     margin-left: 10px;
-    opacity: 0;
     transform: translateX(10px);
   }
 
   // experimenting with post meta styling
-  .content ul li span.post-meta {
-    font-size: 70px;
-    margin-top:-20px;
-    color: red;
-  }
+  //.content ul li span.post-meta {
+  //  font-size: 70px;
+  //  margin-top:-20px;
+  //  color: red;
+  // }
 
 header[role="banner"] {
   position: relative;
@@ -173,8 +170,8 @@ footer[role="contentinfo"] {
       margin-bottom: 20px;
       text-align: left; }
 
-  .content ul li span {
-    display: none; }
+//  .content ul li span {
+//    display: none; }
 
   header[role="banner"] h1 {
     margin-bottom: 20px; }
@@ -234,9 +231,6 @@ header[role="banner"] {
     h1 {
       font-size: 72px;
       line-height: 100%;
-      span {
-        padding-left: 90px;
-      }
     }
     }
     h2 {
@@ -258,20 +252,21 @@ section[role="main"] {
   .left-col {
     text-align: right;
     padding-right: 30px;
-    h2 {
+    h3 {
       font-family: 'Bitter', sans-serif;
       font-weight: 700;
+      font-size: 48px;
     }
   }
   .right-col {
-    h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+    p {
+     font-size: 26px;
     }
   }
 }
 
 
-// custom A links
+// custom hrefs
 
 .nav a {
   position: relative;
@@ -294,7 +289,7 @@ section[role="main"] {
 }
 
 .cl-effect a::before {
-  color: #24d0d0;
+  color: #337ab7;
   content: attr(data-hover);
   position: absolute;
   opacity: 0;
@@ -314,4 +309,9 @@ section[role="main"] {
   -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   opacity: 1;
+}
+
+
+.container-fluid.content {
+  margin: 100px 0;
 }

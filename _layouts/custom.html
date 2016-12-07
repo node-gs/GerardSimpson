@@ -12,7 +12,6 @@
     <title>Gerard Simpson - Web Developer</title>
   </head>
   <body>
-  <div ></div>
     <header role='banner' id="particles-js">
       <div class='container-fluid'>
         <div class='row'>
@@ -23,7 +22,7 @@
                 <span>Web Developer</span>
               </h1>
               <h2>
-                Lover of web technologies, modern JS frameworks and fixing things. </br>
+                Lover of web technologies, modern JS frameworks and fixing things.
                 Below, you can find examples of my <a data-hover="work" href="#work">work</a>, my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">find me</a>, my <a data-hover="resume" href="#resume">resume</a> and my <a data-hover="blog" href="#blog">blog</a>.
               </h2>
             </div>
@@ -35,16 +34,16 @@
       <div class='container-fluid content' id="work">
         <div class="row">
           <div class='col-xs-4 left-col'>
-            <h2>Projects</h2>
+            <h3>Projects</h3>
           </div>
           <div class='col-xs-8 right-col'>
             <ul class="post-list">
               {% for project in site.projects %}
                 <li>
-                  <h2>
+                  <p>
                     <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-                  </h2>
-                  <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+                  </p>
+                  <!-- <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span> -->
                 </li>
               {% endfor %}
             </ul>
@@ -55,7 +54,7 @@
       <div class='container-fluid content'>
         <div class="row">
           <div class='col-xs-4 left-col'>
-            <h2>Info</h2>
+            <h3>Info</h3>
           </div>
           <div class='col-xs-8 right-col'>
             <p>
@@ -74,15 +73,19 @@
       <div class='container-fluid content'>
         <div class="row">
           <div class='col-xs-4 left-col'>
-            <h2>Elsewhere</h2>
+            <h3>Elsewhere</h3>
           </div>
           <div class='col-xs-8 right-col'>
             <ul class='float-list'>
               <li>
+              <p>
                 <a href='https://github.com/node-gs/' target='_blank'>GitHub</a>
+                <p>
               </li>
               <li>
-                <a href='http://stackoverflow.com/users/4476186/gerard-simpson?tab=profile' target='_blank'>stack<strong>overflow</strong></a>
+                <p>
+                  <a href='http://stackoverflow.com/users/4476186/gerard-simpson?tab=profile' target='_blank'>stack<strong>overflow</strong></a>
+                </p>
               </li>
             </ul>
           </div>
@@ -92,18 +95,18 @@
       <div class='container-fluid content'>
         <div class="row">
           <div class='col-xs-4 left-col'>
-            <h2>
+            <h3>
               Blog Posts
-            </h2>
+            </h3>
           </div>
           <div class='col-xs-8 right-col'>
             <ul class="post-list">
               {% for post in site.posts %}
                 <li>
-                  <h2>
+                  <p>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </h2>
-                  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </p>
+                  <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
                 </li>
               {% endfor %}
             </ul>
