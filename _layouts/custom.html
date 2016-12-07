@@ -17,14 +17,14 @@
       <div class='container-fluid'>
         <div class='row'>
           <div class='col-xs-12'>
-            <div class="banner-content">
+            <div class="banner-content cl-effect nav">
               <h1>
                 Gerard Simpson,
                 <span>Web Developer</span>
               </h1>
               <h2>
                 Lover of web technologies, modern JS frameworks and fixing things. </br>
-                Below, you can find examples of my <a href="#work">work</a>, my <a href="#elsewhere">online accounts</a>, how to <a href="#info">find me</a>, my <a href="#resume">resume</a> and my <a href="#blog">blog</a>.
+                Below, you can find examples of my <a data-hover="work" href="#work">work</a>, my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">find me</a>, my <a data-hover="resume" href="#resume">resume</a> and my <a data-hover="blog" href="#blog">blog</a>.
               </h2>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <div class='col-xs-4 left-col'>
             <h2>Projects</h2>
           </div>
-          <div class='col-xs-8'>
+          <div class='col-xs-8 right-col'>
             <ul class="post-list">
               {% for project in site.projects %}
                 <li>
@@ -57,7 +57,7 @@
           <div class='col-xs-4 left-col'>
             <h2>Info</h2>
           </div>
-          <div class='col-xs-8'>
+          <div class='col-xs-8 right-col'>
             <p>
               Email
               <a href='mailto:gardesimpson@gmail.com'>gardesimpson@gmail.com</a>
@@ -76,7 +76,7 @@
           <div class='col-xs-4 left-col'>
             <h2>Elsewhere</h2>
           </div>
-          <div class='col-xs-8'>
+          <div class='col-xs-8 right-col'>
             <ul class='float-list'>
               <li>
                 <a href='https://github.com/node-gs/' target='_blank'>GitHub</a>
@@ -96,7 +96,7 @@
               Blog Posts
             </h2>
           </div>
-          <div class='col-xs-8'>
+          <div class='col-xs-8 right-col'>
             <ul class="post-list">
               {% for post in site.posts %}
                 <li>

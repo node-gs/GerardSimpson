@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
   display: block; }
@@ -47,16 +48,18 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-a {
-  cursor: pointer;
-  color: #3b3a3f;
-  white-space: nowrap;
-  text-decoration: none;
-  border-bottom: 1px solid #3b3a3f;
-  transition: all 0.15s ease-out; }
-  a:hover {
-    color: blueviolet;
-    border-color: transparent; }
+//a {
+//  cursor: pointer;
+//  color: #3b3a3f;
+//  white-space: nowrap;
+//  text-decoration: none;
+//  border-bottom: 1px solid #3b3a3f;
+//  transition: all 0.15s ease-out; }
+//  a:hover {
+//    color: blueviolet;
+//    border-color: transparent; }
+
+
 
 .center {
   text-align: center; }
@@ -125,9 +128,6 @@ header[role="banner"] {
       height: 32px;
       margin-top: 9px;
       fill: #3b3a3f; }
-      header[role="banner"] figure .logo:hover {
-        cursor: progress;
-        fill: blueviolet; }
   header[role="banner"] h1 {
     color: #3b3a3f;
     line-height: 160%; }
@@ -249,6 +249,7 @@ section[role="main"] {
   margin-top:calc(100vh + 60px);
   position: absolute;
   width:100%;
+
   h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -262,4 +263,55 @@ section[role="main"] {
       font-weight: 700;
     }
   }
+  .right-col {
+    h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
+}
+
+
+// custom A links
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  color: #3b3a3f;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a:focus {
+  outline: none;
+}
+
+.cl-effect a {
+  color:  #3b3a3f;
+  text-shadow: 0 0 1px rgba(111,134,134,0.3);
+}
+
+.cl-effect a::before {
+  color: #24d0d0;
+  content: attr(data-hover);
+  position: absolute;
+  opacity: 0;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  -webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+  -moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+  transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+
+.cl-effect a:hover::before,
+.cl-effect a:focus::before {
+  -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+  -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+  transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+  opacity: 1;
 }
