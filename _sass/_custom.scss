@@ -229,16 +229,21 @@ header[role="banner"] {
   .banner-content {
       width: 70%;
       height: 50%;
-      margin-top: 15%;
+      margin-top: 20%;
       margin-left: 1%;
     h1 {
-      font-size:48px;
+      font-size: 72px;
+      line-height: 100%;
+      span {
+        padding-left: 90px;
+      }
+    }
     }
     h2 {
       font-size:36px;
     }
-  }
 }
+
 
 section[role="main"] {
   margin-top:calc(100vh + 60px);
