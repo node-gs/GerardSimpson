@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First Post!"
+title:  "Building a Bridge Playing Algorithim"
 date:   2016-12-06 19:01:03
 categories: 
 ---

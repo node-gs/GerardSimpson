@@ -8,8 +8,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0;
   border: 0 none; }
 
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size:36px;
+}
+p {
+  font-size: 18px;
+}
+
 ul {
-  list-style: none; }
+  list-style: none; 
+  margin-left: 10px;
+  font-size: 18px;
+}
 
 button, textarea, input {
   border: none;
@@ -21,7 +34,7 @@ button, textarea, input {
 
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 400;
+  font-weight: 500;
 }
 h1 {
   font-family: 'Bitter', sans-serif;
@@ -33,9 +46,6 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: normal; }
 
-
-* {
-  transition: all 0.2s ease-out; }
 
 body {
   font-size: 100%;
@@ -94,10 +104,7 @@ header[role="banner"] {
 
 
 
-
 header[role="banner"] {
-  //clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-  //-webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   div.container-fluid {
     position:absolute;
   }
@@ -113,14 +120,15 @@ header[role="banner"] {
     }
     h2 {
       font-size:36px;
+      font-weight:400;
     }
 }
 
 
+
+
 section[role="main"] {
-  margin-top:calc(100vh + 60px);
-  position: absolute;
-  width:100%;
+
 
   h2 {
     font-family: 'Raleway', sans-serif;
@@ -148,7 +156,7 @@ section[role="main"] {
     }
     ul {
       margin: 0;
-      padding-top: 22px;
+      padding-top: 28px;
     }
   }
 }
