@@ -170,7 +170,7 @@ section[role="main"] {
   outline: none;
   text-decoration: none;
   text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  color: #3b3a3f;
+  color: #2a7ae2;
   font-weight: 500;
 }
 
@@ -185,7 +185,7 @@ section[role="main"] {
 }
 
 .cl-effect a::before {
-  color: #337ab7;
+  color: #2a7ae2;
   content: attr(data-hover);
   position: absolute;
   opacity: 0;
