@@ -115,6 +115,9 @@ header[role="banner"] {
       @media(max-width: 768px) {
         font-size: 62px;
       }
+      @media(max-width:468px) {
+        font-size: 42px;
+      }
     }
     }
     h2 {
@@ -145,6 +148,9 @@ section[role="main"] {
       font-family: 'Bitter', sans-serif;
       font-weight: 700;
       font-size: 48px;
+      @media(max-width: 468px) {
+        font-size: 40px;
+      }
     }
   }
   .right-col {
