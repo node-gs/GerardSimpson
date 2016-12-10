@@ -237,7 +237,8 @@ section {
     height: 60px;
     padding: 6px 14px;
     @media (max-width: 768px) {
-    position:absolute;
+      position: static;
+      margin: 30px auto;
     }
     a {
       color: #fff;
