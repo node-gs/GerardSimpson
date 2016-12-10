@@ -214,3 +214,31 @@ section[role="main"] {
 .post-list > li {
   margin-bottom: 0px;
 }
+
+.back-button {
+  font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    right: 60px;
+    top: 40px;
+    padding: 20px;
+    background: #3b3a3f;
+    border-radius: 120px;
+    width: 60px;
+    color: #fff;
+    cursor: pointer;
+    a {
+      color: #fff;
+      text-align: left;
+      font-size: 30px;
+      position: relative;
+      left: -5px;
+      top: -8px;
+      &:hover {
+        text-decoration: none;
+      }    
+    }
+    &:hover {
+      background: #2a7ae2;
+    }
+}
