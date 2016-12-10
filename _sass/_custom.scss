@@ -20,7 +20,7 @@ body{
   text-rendering: optimizeLegibility; 
 }
 body * {
-  z-index: 2;
+  z-index: 1;
 } 
 
 * {
@@ -258,4 +258,5 @@ section {
   position: absolute;
   z-index: 1;
   pointer-events: none;
+  background: #f5f5f5;
 }
