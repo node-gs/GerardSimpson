@@ -1,10 +1,15 @@
 ---
-layout: post
+layout: page
 title:  "Booking System for WOVI"
 date:   2016-12-06 19:01:03
 categories: 
 ---
-Hello, World!
+# Hello, World!
+
+text text text text text text text text text text text text text text text 
+
+text text text text text text text text text text text text text text text text text text text text text 
+
 
 {% highlight ruby %}
 def print_hi(name)
