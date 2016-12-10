@@ -80,17 +80,14 @@ hr {
 
 
 .content {
-  overflow: hidden; }
-  .content p {
-    margin-bottom: 12.5px; }
-  .content ul li:hover span {
-    opacity: 0.3;
-    transform: translateX(0); }
-  .content ul li span {
-    display: inline-block;
-    margin-left: 10px;
-    transform: translateX(10px);
+  overflow: hidden;
+  p {
+    margin-bottom: 0;
   }
+}
+  
+
+  
 
 
 header[role="banner"] {
@@ -111,6 +108,10 @@ header[role="banner"] {
       height: 50%;
       margin-top: 20%;
       margin-left: 17%;
+      @media( max-width: 768px){
+        text-align: center;
+        margin: 20% auto 0;
+      }
     h1 {
       font-size: 72px;
       line-height: 100%;
@@ -160,7 +161,7 @@ section[role="main"] {
     }
     ul {
       margin: 0;
-      padding-top: 28px;
+      padding-top: 18px;
     }
   }
 }
