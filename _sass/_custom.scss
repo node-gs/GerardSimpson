@@ -114,11 +114,17 @@ header[role="banner"] {
     h1 {
       font-size: 72px;
       line-height: 100%;
+      @media(max-width: 768px) {
+        font-size: 62px;
+      }
     }
     }
     h2 {
       font-size:36px;
       font-weight:400;
+      @media(max-width: 768px) {
+        font-size: 28px;
+      }
     }
 }
 
