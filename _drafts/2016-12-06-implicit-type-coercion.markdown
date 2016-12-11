@@ -1,7 +1,5 @@
----
 layout: post
-title:  "MCTS I"
-date:   2016-12-01 19:01:03
+title:  "Type Coercion in JS"
 categories: 
 ---
 Hello, World!

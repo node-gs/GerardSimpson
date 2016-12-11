@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "MCTS Considerations I"
+date:   2016-12-01 19:01:03
+categories: 
+---
+
+A Monte Carlo Tree Search algorithim  (MCTS) combines two ideas:
+
+[The multi-armed bandit problem](https://en.wikipedia.org/wiki/Multi-armed_bandit)
+
+[Tree Search](https://en.wikipedia.org/wiki/Search_tree)
+
+This blog post focusses on some of the decisions I made while developing this algorithim to play Euchre, as opposed to the actual workings of the algorithim itself, so, if you're not interested in reading up on the specifics of MCTS, you might have to take my word on a few things :)
+
+So, for this algorithim to be effective in a real-time, multiplayer environment, it needs to be written so that it can perform as many iterations as possible within an arbitrary time constraint (say, three seconds). The more iterations the algorithim can perform, the more accurate the model of the data becomes and the more accurate the AI player becomes when making decisions.
+
+One of the first considerations I had when developing this algorithim was how to represent a card; In a standard game of Euchre, there are 52 cards, divided into 4 suits. I needed 52 uniquely identifiable tokens that can be identified and compared with respect to their face and suit value.
+
+I started with the idea that cards could be objects, for example:
+
+~~~
+  function Card(pointValue, cardValue,  suitValue, suitName, nameValue) {
+    this.pointValue = pointValue;
+    this.cardValue = cardValue;
+    this.suitValue = suitValue;
+    this.suitName = suitName;
+    this.nameValue = nameValue;
+    this.totalValue = suitValue * 100 + cardValue;
+    this.cardName = nameValue + ' of ' + suitName;
+    this.playedByPlayer = null;
+  }
+  let card = new Card(.....);
+~~~
+{: .language-javascript}
+
+But I felt like passing around 52 objects hundreds of thousands of times was a pretty cumbersome and overengineered solution. Realistically, the only information I needed for each card was it's suit and total value, so I decided if I could represent each card as [primitive type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values) -an integer or a string, then I could save on memory usage, increase my processing efficiency and improve code readability. 
+
+But is it faster to compare strings or number types? For example `'9h' vs 10h` (9 of hearts vs 10 of hearts), or `209 vs 210` (9 of hearts as a number, with 2 being proxy for hearts).
+
+JSPerf was down at the time, and I didn't feel like picking up a performance testing library for something which was a very early consideration at the time, so I turned to stackoverflow.
+
+According to [this](http://stackoverflow.com/questions/23836825/is-javascript-string-comparison-just-as-fast-as-number-comparison) stackoverflow question and answer: 
+>String comparison could be "just as fast" (depending on implementation and values) - or it could be "much slower".
+
+After browsing a few more sources I decided that this was probably correct, especially considering that I would have to do explicit type coersion on the strings to be able to compare them, or use implicit type coercion with lexicograpical comparison ( blog post coming soon ), neither of which appealed to me. But how would I compare these numbers? I needed to be able to identify if a card/number was of the same suit as another, if so, compare it's face value, and if not, compare it's suit value.
+
+I came up with an efficient, workable solution as follows:
+
+~~~
+ clubs: [102, 103, 104, ... , 114];
+ diamonds: [202, 203, 204, ... , 214];
+ hearts: [302, 303, 304, ... , 314];
+ spades: [402, 403, 404, ... , 414];
+
+ // to get suit value we divide by 100 and use the bitwise operator |0 eg 402/100|0 = 4 = spades;
+
+ // to get the card value : 402 - (100*(402/100|0)) = 2;   
+~~~
+{: .language-javascript}
+
+All cards are represented by a 3 digit number, the first digit representing the suit value, with the second two digits representing the face value of the card. 
+
+This enabled me to be able to compare cards quickly and easily, and because I'm dealing with primitive types as opposed to reference types, there's no need to worry about having to [deep clone](http://stackoverflow.com/questions/13756482/create-copy-of-multi-dimensional-array-not-reference-javascript) arrays of these cards, I can simply `.slice()` the arrays for a copy, too easy!
+
+Because the card values only had to be ordinal, the relative magnitude of the integer is irrelevant, i.e it only matters that 408 (8 of spades) is higher than 102 (2 of clubs), it doesn't matter that it is 4 times it's value.
+
+Great! sorted! I had a concrete way to store, compare and use card values. Iterating over arrays of these values was my next concern... to use a library or not? which would be faster and more reliable? More importantly, which would give me the best chance of finishing the project?
+
+I'll continue in the second blog post on [MCTS Considerations II]({{page.next.url  | prepend: site.baseurl}})
