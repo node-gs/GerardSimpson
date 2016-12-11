@@ -9,4 +9,4 @@ categories:
 
 This is project currently under construction. To be used by Dealer Solutions clients managing their inventory and website settings.
 
-built in Angular 2. Using Angular CLI
+Built in Angular 2. Using Angular CLI

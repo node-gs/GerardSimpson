@@ -20,4 +20,6 @@ Naturally after finding out that a library could beat native JS in terms of perf
 
 I decided to [stick with lodash](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore)
 
+To be continued...
+
 

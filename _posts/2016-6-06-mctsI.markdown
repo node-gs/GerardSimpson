@@ -67,4 +67,4 @@ Because the card values only had to be ordinal, the relative magnitude of the in
 
 Great! sorted! I had a concrete way to store, compare and use card values. Iterating over arrays of these values was my next concern... to use a library or not? which would be faster and more reliable? More importantly, which would give me the best chance of finishing the project?
 
-I'll continue in the second blog post on MCTS Considerations II( blog post coming soon )
+I'll continue in the second blog post on [MCTS Considerations II]({{page.next.url  | prepend: site.baseurl}})
