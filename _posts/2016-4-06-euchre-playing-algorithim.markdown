@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Bridge Playing Algorithim"
+title:  "Building a Euchre Playing Algorithim"
 date:   2016-4-06 12:00:00
 categories: 
 ---
