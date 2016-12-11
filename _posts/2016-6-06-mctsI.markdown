@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MCTS Considerations I"
-date:   2016-12-01 19:01:03
+date:   2016-6-06 19:01:03
 categories: 
 ---
 
@@ -9,7 +9,7 @@ A Monte Carlo Tree Search algorithim  (MCTS) combines two ideas:
 
 [The multi-armed bandit problem](https://en.wikipedia.org/wiki/Multi-armed_bandit)
 
-[Tree Search](https://en.wikipedia.org/wiki/Search_tree)
+[A Search Tree](https://en.wikipedia.org/wiki/Search_tree)
 
 This blog post focusses on some of the decisions I made while developing this algorithim to play Euchre, as opposed to the actual workings of the algorithim itself, so, if you're not interested in reading up on the specifics of MCTS, you might have to take my word on a few things :)
 
@@ -67,4 +67,4 @@ Because the card values only had to be ordinal, the relative magnitude of the in
 
 Great! sorted! I had a concrete way to store, compare and use card values. Iterating over arrays of these values was my next concern... to use a library or not? which would be faster and more reliable? More importantly, which would give me the best chance of finishing the project?
 
-I'll continue in the second blog post on [MCTS Considerations II]({{page.next.url  | prepend: site.baseurl}})
+I'll continue in the second blog post on MCTS Considerations II( blog post coming soon )
