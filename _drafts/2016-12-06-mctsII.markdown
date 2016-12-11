@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "MCTS Considerations II"
+date:   2016-12-02 19:01:03
+categories: 
+---
+This is the second part to this [post]({{page.previous.url  | prepend: site.baseurl}}).
+
+I had figured out how to represent a playing card in a memory efficient and maintainable way. 
+
+The challenge was then to figure out how to iterate over, loop through and mutate these cards.
+
+I needed to be able to do things like: shuffle all of the cards, deal cards to players, transfer cards from a player to the board and eventually off the board.
+
+I thought to myself "right, I'm going to build this entire thing using vanilla JS, to increase performance and to hone my skills as a javascript developer." and off I went, furiously coding away into the night.
+
+While I was developing this algorithim in my spare time, one of the developers at my work introduced me to [lodash](https://lodash.com/). My ideas on continuing to develop using vanilla JS changed very rapidly. Not only did I discover that lodash was a whole lot easier to read and maintain, but was also [faster](https://www.youtube.com/watch?v=cD9utLH3QOk) than vanilla JS and has better cross browser support... huh.
+
+Naturally after finding out that a library could beat native JS in terms of performance, I looked around for other JS utility libraries.
+
+I decided to [stick with lodash](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore)
+
+
