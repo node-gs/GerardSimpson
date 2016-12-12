@@ -26,7 +26,7 @@ In a game of Euchre, when the opening player in the turn plays a card, if possib
 
 I wanted to be able to have a data structure ready so that I wouldn't have to [filter](https://lodash.com/docs/#filter) each player's hand every turn, and could just pluck the suitable card (pun intended) from my data structure, thinking that a nice multidimensional array would give me higher simulations per second.
 
-This lead me to ask this [stackoverflow question](https://stackoverflow.com/questions/39178029/partition-javascript-array-of-primitive-types-into-multiple-parts).
+This led me to ask this [stackoverflow question](https://stackoverflow.com/questions/39178029/partition-javascript-array-of-primitive-types-into-multiple-parts).
 
 Great, I got a lot of good answers! I chose one that I thought was the most simple and consistent with my current codebase. I had my data structure set and was ready to keep going.
 
