@@ -18,6 +18,22 @@ While I was developing this algorithim in my spare time, one of the developers a
 
 Naturally after finding out that a library could beat native JS in terms of performance, I looked around for other JS utility libraries.
 
-I decided to [stick with lodash](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore)
+I decided to [stick with lodash](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore).
 
-To be continued...
+#### Deliberating over data
+
+In a game of Euchre, when the opening player in the turn plays a card, if possible, subsequent players must follow suit. This turned into an interesting consideration while developing the algorithim, as I was simulating the game thousands of times per second.
+
+I wanted to be able to have a data structure ready so that I wouldn't have to [filter](https://lodash.com/docs/#filter) each player's hand every turn, and could just pluck the suitable card (pun intended) from my data structure, thinking that a nice multidimensional array would give me higher simulations per second.
+
+This led me to ask this [stackoverflow question](https://stackoverflow.com/questions/39178029/partition-javascript-array-of-primitive-types-into-multiple-parts).
+
+Great, I got a lot of good answers! I chose one that I thought was the most simple and consistent with my current codebase. I had my data structure set and was ready to keep going.
+
+Over the next few days, this data structure ended up costing me a lot of time and headaches. Because the array was multidimensional, it was full of reference types and had to be deep cloned over and over, greatly decreasing my simulations per second and increasing the complexity of my codebase.
+
+After struggling with this idea for a while, I ended up scrapping the whole idea of a multidimensional array and just filtering the array of cards for every simulation, giving me more simulations per second (13000 to 20000) and a cleaner codebase.
+
+In conclusion, it seems that first impressions don't always count! lodash ended up being faster than native JS and using a lodash filter ended up being faster than creating a multidimensional array to iterate over.
+
+
