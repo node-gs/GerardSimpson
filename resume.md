@@ -43,3 +43,5 @@ permalink: /resume/
 * 2008 - 2012
 * Honours in Finance (University of Canterbury, 2012)
 * Finance and Economics double major (University of Canterbury, 2008-2011)
+
+### [Get the PDF]({{ site.baseurl }}/documents/Resume.pdf) 
