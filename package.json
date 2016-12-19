@@ -4,7 +4,7 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:js": "browserify ./js/index.js -o ./js/index.bundle.js -t  [ babelify --presets [ es2015 ] ]"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/node-gs/GerardSimpson/issues"
   },
-  "homepage": "https://github.com/node-gs/GerardSimpson#readme"
+  "homepage": "https://github.com/node-gs/GerardSimpson#readme",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0"
+  }
 }
