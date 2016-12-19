@@ -6,8 +6,8 @@ title: Gerard Simpson - Web Developer
   </div>
     <header role="banner">
       <div class="container-fluid">
-        <div class='row'>
-          <div class='col-xs-12'>
+        <div class="row">
+          <div class="col-xs-12">
             <div class="banner-content cl-effect nav">
               <h1>
                 Gerard Simpson,
@@ -23,15 +23,11 @@ title: Gerard Simpson - Web Developer
       </div>
     </header>
     
-    <hr>
-    
-    <section role='main'>
-      <div class='container-fluid content' id="work">
+    <section role="main">
+      <div class="container-fluid content" id="work">
         <div class="row">
-          <div class='col-sm-4 left-col'>
-            <h3>Projects</h3>
-          </div>
-          <div class='col-sm-8 right-col'>
+          <h3 class="left-col">Projects</h3>
+          <div class="col-sm-offset-4 col-sm-8 right-col">
             <ul class="post-list">
               {% for project in site.projects %}
                 <li>
@@ -48,14 +44,10 @@ title: Gerard Simpson - Web Developer
 
       <hr>
 
-      <div class='container-fluid content' id="blog">
+      <div class="container-fluid content" id="blog">
         <div class="row">
-          <div class='col-sm-4 left-col'>
-            <h3>
-              Blog Posts
-            </h3>
-          </div>
-          <div class='col-sm-8 right-col'>
+          <h3 class="left-col">Blog Posts</h3>
+          <div class="col-sm-offset-4 col-sm-8 right-col">
             <ul class="post-list">
               {% for post in site.posts %}
                 <li>
@@ -72,18 +64,15 @@ title: Gerard Simpson - Web Developer
 
       <hr>
 
-      <div class='container-fluid content' id="blog">
+      <div class="container-fluid content">
         <div class="row">
-          <div class='col-sm-4 left-col'>
-            <h3>
-              Things
-            </h3>
-          </div>
-          <div class='col-sm-8 right-col'>
+          <h3 class="left-col">Things</h3>
+          <div class="col-sm-offset-4 col-sm-8 right-col">
             <ul class="post-list">
                 <li>
                   <p>
-                    <a class="post-link" href="{{ '/fancyslider' | prepend: site.baseurl }}">fancyslider</a>
+                    <a class="post-link" href="{{ '/slider' | prepend: site.baseurl }}">fancyslider</a>
+                    <a class="post-link" href="{{ '/playground' | prepend: site.baseurl }}">fancyslider</a>
                   </p>
                   <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
                 </li>
@@ -94,12 +83,10 @@ title: Gerard Simpson - Web Developer
 
       <hr>
 
-      <div class='container-fluid content' id="info">
+      <div class="container-fluid content" id="info">
         <div class="row">
-          <div class='col-sm-4 left-col'>
-            <h3>Info</h3>
-          </div>
-          <div class='col-sm-8 right-col'>
+          <h3 class="left-col">Info</h3>
+          <div class="col-sm-offset-4 col-sm-8 right-col">
             <ul>
               <li>
                 <p>
@@ -123,12 +110,10 @@ title: Gerard Simpson - Web Developer
 
       <hr>
 
-      <div class='container-fluid content' id="elsewhere">
+      <div class="container-fluid content" id="elsewhere">
         <div class="row">
-          <div class='col-sm-4 left-col'>
-            <h3>Elsewhere</h3>
-          </div>
-          <div class='col-sm-8 right-col'>
+          <h3 class="left-col">Elsewhere</h3>
+          <div class="col-sm-offset-4 col-sm-8 right-col">
             <ul class='float-list'>
               <li>
               <p>

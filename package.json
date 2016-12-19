@@ -1,0 +1,19 @@
+{
+  "name": "gerardsimpson",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-gs/GerardSimpson.git"
+  },
+  "author": "Gerard Simpson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/node-gs/GerardSimpson/issues"
+  },
+  "homepage": "https://github.com/node-gs/GerardSimpson#readme"
+}
