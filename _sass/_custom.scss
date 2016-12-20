@@ -34,7 +34,7 @@ h1 {
   font-size: calc(36px + 36 * ((100vw - 350px) / 674));
 }
 h2 {
-  font-size: calc(18px + 18 * ((100vw - 350px) / 674));
+  font-size: calc(24px + 6 * ((100vw - 350px) / 674));
 }
 p {
   font-size: 1.6rem;
@@ -90,12 +90,16 @@ header[role="banner"] {
   border-bottom: 1px solid transparent; 
   height: 100vh;
   z-index: 1;
+  padding-top: 20vh;
   .banner-content {
+    @media( max-width: 768px) {
+      padding: 25px;
+    }
     h1 {
-      font-size: calc(36px + 36 * ((100vw - 350px) / 674));
+      font-size: calc(36px + 26 * ((100vw - 350px) / 674));
     }
     h2 {
-      font-size: calc(18px + 18 * ((100vw - 350px) / 674));
+      font-size: calc(22px + 6 * ((100vw - 350px) / 674));
       font-weight:400;
     }
   }
@@ -110,6 +114,9 @@ section[role="main"] {
     margin: 0;
     padding: 0 30px;
     background: #fff;
+    @media(max-width: 768px) {
+      padding: 0 35px;
+    }
   h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
