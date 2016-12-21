@@ -232,6 +232,7 @@ section[role="main"] {
     cursor: pointer;
     height: 60px;
     padding: 6px 14px;
+    z-index: 1;
     @media (max-width: 768px) {
       position: static;
       margin: 30px auto;
