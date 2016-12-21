@@ -140,7 +140,7 @@ section[role="main"] {
       position: static;
       margin: 0;
       text-align: left;
-      padding-left: 20px;
+      padding-left: 15px;
     }
     h3 {
       @media(max-width: 468px) {
@@ -152,12 +152,13 @@ section[role="main"] {
     // @media(max-width: 768px) {
     //   text-align: center;
     // } 
-    p {
+    p, .post-link {
      font-size: 2.4rem;
      @media(max-width: 768px) {
       font-size: 1.6rem;
      }
     }
+
     ul {
       margin: 0;
       padding-top: 1.8rem;
