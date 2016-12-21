@@ -7,6 +7,7 @@ baseurl: "/GerardSimpson" # the subpath of your site, e.g. /blog/
 url: "https://node-gs.github.io" # the base hostname & protocol for your site
 twitter_username: GerardSimpson1
 github_username:  node-gs
+exclude: [node_modules]
 # Build settings
 markdown: kramdown
 collections:
