@@ -4,7 +4,7 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build:js": "browserify ./js/index.js -o ./js/index.bundle.js -t  [ babelify --presets [ es2015 ] ]"
+    "build:js": "browserify ./js/index.js  -t  [ babelify --presets [ es2015 ] ] | uglifyjs > ./js/index.bundle.js"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,8 @@
 /**
  * Requires
  */
-
+import * as particle from "./particles.js";
+import * as particles from "./particles.min.js";
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
 
@@ -10,7 +11,7 @@ import throttle from 'lodash/throttle';
  */
 
 const $window = $(window);
-const $parallax = $('#particles-js');
+const $parallax = $('header');
 let maxHeight = $parallax.outerHeight();
 /**
  * Initialisation
@@ -42,3 +43,18 @@ function parallax() {
  * Invoke function
  */
 initialise();
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
