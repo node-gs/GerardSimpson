@@ -15,7 +15,7 @@ title: Gerard Simpson - Web Developer
               </h1>
               <h2>
                 Lover of web technologies, modern JavaScript, and creating things.
-                Below, you can find my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">contact me</a> and my <a data-hover="blog" href="#blog">blog</a>.
+                Below, you can find my <a data-hover="online accounts" href="#elsewhere">online accounts</a>, how to <a data-hover="find me" href="#info">find me</a> and my <a data-hover="blog" href="#blog">blog</a>.
               </h2>
             </div>
           </div>
@@ -24,7 +24,7 @@ title: Gerard Simpson - Web Developer
     </header>
 
     <section role="main">
-      <!-- <div class="container-fluid content" id="work">
+      <div class="container-fluid content" id="work">
         <div class="row">
           <h3 class="left-col">Projects</h3>
           <div class="col-sm-offset-3 col-sm-8 right-col">
@@ -35,26 +35,6 @@ title: Gerard Simpson - Web Developer
                     <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
                   </p>
                   <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <hr> -->
-
-      <div class="container-fluid content" id="blog">
-        <div class="row">
-          <h3 class="left-col">Blog Posts</h3>
-          <div class="col-sm-offset-3 col-sm-8 right-col">
-            <ul class="post-list">
-              {% for post in site.posts %}
-                <li>
-                  <p>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </p>
-                  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
                 </li>
               {% endfor %}
             </ul>
@@ -93,7 +73,7 @@ title: Gerard Simpson - Web Developer
 
       <div class="container-fluid content" id="elsewhere">
         <div class="row">
-          <h3 class="left-col">Elsewhere</h3>
+          <h3 class="left-col">Community</h3>
           <div class="col-sm-offset-3 col-sm-8 right-col">
             <ul class='float-list'>
               <li>
@@ -111,6 +91,26 @@ title: Gerard Simpson - Web Developer
                   <a href='https://www.linkedin.com/in/gerard-simpson-4377a262/' target='_blank'>LinkedIn</a>
                 </p>
               </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-fluid content" id="blog">
+        <div class="row">
+          <h3 class="left-col">Blog Posts</h3>
+          <div class="col-sm-offset-3 col-sm-8 right-col">
+            <ul class="post-list">
+              {% for post in site.posts %}
+                <li>
+                  <p>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </p>
+                  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
